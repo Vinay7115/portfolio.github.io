@@ -1,0 +1,543 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #080808;
+    color: #fff;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+#header {
+    width: 100%;
+    height: 100vh;
+    background-image: url(pexels-matheusnatan-3394939.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+/* vh is a viewport height use for making website reponsive */
+
+.container {
+    padding: 10px 10%;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* The flex-wrap CSS property sets whether flex items are forced onto one line or can wrap onto multiple lines. If wrapping is allowed, it sets the direction that lines are stacked. */
+
+.logo {
+    width: 175px;
+    height: 65px;
+    border-radius: 15px;
+    border: 5px solid black;
+
+}
+
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+
+nav ul li a::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+
+/* ! The line nav ul li a::after selects and styles the little extra element that comes after a link (<a>) inside a list (<li>) which is inside another list (<ul>) within a navigation (<nav>) menu. It's commonly used to add visual effects, like underlines or arrows, to links in navigation menus
+content: '': This line sets the content of the pseudo-element to an empty string. This is necessary to create a pseudo-element that can be styled.
+width: 0;: Initially, the width of the pseudo-element is set to zero, meaning it won't be visible.
+height: 3px;: This line sets the height of the pseudo-element to 3 pixels, giving it the appearance of an underline.
+background: #ff004f;: The color of the underline is set to a shade of pink (#ff004f). You can adjust this value to change the color.
+position: absolute;: The pseudo-element is positioned absolutely within its containing element (<a> element).
+left: 0;: It's placed at the left edge of its containing element.
+bottom: -6px;: The pseudo-element is positioned 6 pixels above the bottom of its containing element, effectively placing it underneath the text of the link.
+transition: 0.5s;: This line adds a transition effect to the pseudo-element, making the underline appear gradually over 0.5 seconds when the link is hovered over */
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+.header-text {
+    margin-top: 20%;
+    font-size: 30px;
+    
+
+}
+
+.header-text h1 {
+    margin-top: 20px;
+    font-size: 60px;
+}
+
+.header-text h1 span {
+    color: #ff004f;
+}
+
+.black {
+    color:#333333;
+}
+
+/* span is use to set particular style to sentences or the words. */
+
+
+/* <!-- -----------about-------------------> */
+
+#about {
+    padding: 80px 0;
+    color: #ababab;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.about-col-1 {
+    flex-basis: 35%;
+    
+}
+
+.about-col-1 img {
+    width: 100%;
+    z-index: -1;
+    border-radius: 15px;
+    border: 6px solid transparent;
+    border-image-source: linear-gradient(to right, #FF7E5F, #FEB47B, #FF6E7F);
+    border-image-slice:1;
+}
+
+.about-col-2 {
+    flex-basis: 60%;
+}
+
+.sub-title {
+    font-size: 60px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.tab-titles {
+    display: flex;
+    margin: 20px 0 40px;
+}
+
+.tab-links {
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+
+/* cursor: pointer;: This property sets the cursor type when hovering over the element to a pointer, indicating to the user that the element is clickable or interactive.
+position: relative;: This property sets the positioning context for the element to "relative". This means that any absolutely positioned child elements will be positioned relative to this element's position. */
+
+.tab-links::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+
+}
+
+.tab-links.active-link::after {
+    width: 50%;
+}
+
+/* this CSS code creates a thin horizontal line (3 pixels in height) with a pink color that appears below elements with the class "tab-links". The line will transition smoothly over 0.5 seconds when its properties change. */
+
+/* ***left: 0; bottom: -8px;: These properties position the pseudo-element horizontally at the left edge of its containing element (left: 0) and vertically 8 pixels above the bottom edge of its containing element (bottom: -8px). */
+
+.tab-contents ul li {
+    list-style: none;
+    margin: 10px 0;
+}
+
+.tab-contents ul li span {
+    color: #b54769;
+    font-size: 14px;
+}
+
+.tab-contents {
+    display: none;
+}
+
+.tab-contents.active-tab {
+    display: block;
+}
+
+/* The display CSS property sets whether an element is treated as a block or inline box and the layout used for its children, such as flow layout, grid or flex. */
+
+/* 
+-----------services------------------ */
+
+#services {
+    padding: 30px 0;
+}
+
+.services-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+
+}
+
+/* this CSS code snippet creates a grid layout for elements with the class "services-list", where the columns automatically adjust to fit the available space. Each column is at least 250 pixels wide but can expand to fill any remaining space in the container. There's a 40-pixel gap between each grid item, and the entire grid is pushed down from the top by 50 pixels. */
+
+.services-list div {
+    background: #262626;
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 300;
+    border-radius: 10px;
+    transition: background 0.5s, transform 0.5s;
+    border: 4px solid transparent;
+    border-image: conic-gradient(transparent,blue);
+    border-image-slice: 1;
+    
+
+
+
+}
+
+
+
+
+.services-list div i {
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+
+.services-list div h2 {
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 15px;
+
+}
+
+.services-list div a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 12px;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+
+.services-list div:hover {
+    background: #ff004f;
+    transform: translateY(-10px);
+}
+
+/* -------------portfolio-------------- */
+
+#portfolio {
+    padding: 50px 0;
+}
+
+.work-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+
+
+.work {
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.work img {
+    width: 100%;
+    height: 450px;
+    border-radius: 10px;
+    display: block;
+    border: 6px solid transparent;
+    border-image: conic-gradient(from 211.2deg,transparent,rgb(0, 255, 98));
+    border-image-slice:1;
+}
+
+.layer {
+    width: 100%;
+    height: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), #ff004f);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    font-size: 14px;
+    transition: 0.5s;
+}
+
+.layer h3 {
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.layer a {
+    margin-top: 20px;
+    color: #ff004f;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 60px;
+    background: #fff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+
+}
+
+.work:hover img {
+    transform: scale(1.1);
+}
+
+.work:hover .layer {
+    height: 100%;
+}
+
+.btn {
+    display: block;
+    margin: 50px auto;
+    width: fit-content;
+    border: 1px solid #ff004f;
+    padding: 14px 50px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #fff;
+    transition: background 0.5s;
+}
+
+.btn:hover {
+    background: #ff004f;
+}
+
+
+/* -------------contact------------------ */
+
+
+.contact-left {
+    flex-basis: 35%;
+}
+
+.contact-right {
+    flex-basis: 60%;
+}
+
+.contact-left p {
+    margin-top: 30px;
+}
+
+.contact-left p i {
+    color: #ff004f;
+    margin-right: 15px;
+    font-size: 25px;
+}
+
+.social-icons {
+    margin-top: 30px;
+
+}
+
+.social-icons a {
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color: #ababab;
+    display: inline-block;
+    transition: transform 0.5s;
+}
+
+.social-icons a:hover {
+    color: #ff004f;
+    transform: translateY(-5px);
+}
+
+.btn.btn2 {
+    display: inline-block;
+    background: #ff004f;
+}
+
+.contact-right form {
+    width: 100%;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #262626;
+    padding: 15px;
+    margin: 15px 00;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 6px;
+}
+
+form btn2 {
+    padding: 14px 60px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.copyright {
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    background: #262626;
+    font-weight: 300;
+    margin-top: 20px;
+}
+
+.copyright i {
+    color: #ff004f;
+}
+
+#msg {
+    color: #61b752;
+    margin-top: -40px;
+    display: block;
+}
+
+
+
+/* ------------css for small screen------------ */
+
+
+#cross,
+#menu {
+    display: none;
+}
+
+@media only screen and (max-width: 600px) {
+    /* #header {
+        background-image: url(phone-background.png);
+    } */
+
+    .header-text {
+        margin-top: 50%;
+       
+    }
+    .logo {
+        width: 26vw;
+        /* height: 65px;
+        border-radius: 15px;
+        border: 5px solid black; */
+    
+    }
+
+    .header-text h1 {
+        font-size: 40px;
+    }
+    .header-text p {
+        font-size: 30px;
+    }
+
+    #cross,
+    #menu {
+        display: block;
+        font-size: 25px;
+    }
+
+    nav ul {
+        background: #ff004f;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: right 0.5s;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 25px;
+    }
+
+    #cross {
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+
+    .sub-title {
+        font-size: 40px;
+    }
+
+    .about-col-1,
+    .about-col-2 {
+        flex-basis: 100%;
+    }
+
+    .about-col-1 {
+        margin-bottom: 30px;
+    }
+
+    .about-col-2 {
+        font-size: 14px;
+    }
+
+    .tab-links {
+        font-size: 16px;
+        margin-right: 20px;
+    }
+
+    .contact-left,
+    .contact-right {
+        flex-basis: 100%;
+    }
+
+    .copyright {
+        font-size: 14px;
+    }
+
+
+
+
+}

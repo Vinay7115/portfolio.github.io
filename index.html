@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>personal_website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="logo1.jpg" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#sevices">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i id="cross" class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i id="menu" class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p>WEB DEVELOPER</p>
+                <h1>Hi, I'm <span>Vinay</span><br> Your Partner in Digital <br>Transformation</h1>
+               <p class="black">Specializing in creating stunning, user-friendly web<br> and mobile applications that meet your needs.</p>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- -----------about------------------->
+
+
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="user3.jpg">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Hello! I'm Vinay Agrahari, a second-year student at IIT Kharagpur, pursuing a degree in Mechanical Engineering. I have a strong passion for coding, technology, and problem-solving. My education in Mechanical Engineering has equipped me with a solid foundation in design, analysis, and manufacturing processes. I enjoy leveraging my technical skills to create innovative solutions and tackle challenging problems. In my free time, I love exploring new technologies, working on personal projects, and continuously learning to expand my knowledge.</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link " onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>C++</span><br>Proficient in C++ programming, focusing on object-oriented design and data structures.</li>
+                            <li><span>C</span><br>Experienced in C programming for system-level applications and embedded systems.</li>
+                            <li><span>Python</span><br>Skilled in Python for web development, data analysis, and machine learning.</li>
+                            <li><span>HTML & CSS</span><br>Creating responsive and visually appealing web pages using HTML and CSS.</li>
+                            <li><span>JavaScript</span><br>Developing interactive and dynamic web applications with JavaScript.</li>
+                            <li><span>Machine Learning</span><br>Implementing machine learning algorithms and models for data-driven solutions.</li>
+                            <li><span>Frontend Development</span><br>Building user-friendly and visually appealing frontend interfaces for web applications.</li>
+                        
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>Intern at Encryptix</span><br>Worked on machine learning projects, gaining hands-on experience in data analysis and predictive modeling.</li>
+            <li><span>DIY Course</span><br>Completed a comprehensive course on DIY projects, enhancing practical skills and problem-solving abilities.</li>
+            <li><span>Web Development Projects</span><br>Worked on various web development projects, building responsive and user-friendly websites.</li>
+            <li><span>Volunteering in NSS</span><br>Actively participated in the National Service Scheme, contributing to community service and development projects.</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>Second Year</span><br>Currently pursuing - IIT Kharagpur, Mechanical Engineering<br>Grade:8.54</li>
+                            <li><span>Class 12</span><br>90% - Don Bosco School</li>
+                            <li><span>Class 10</span><br>98.4% - M.P. Public School</li> 
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- -------------services------------------ -->
+
+
+    <div id="sevices">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <div class="border">
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Web Development</h2>
+                    <p>I specialize in developing responsive and user-friendly web applications using HTML, CSS, and JavaScript. I have worked on various web development projects, building dynamic and interactive websites.</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-cogs"></i>
+                    <h2>Machine Learning</h2>
+                    <p>With hands-on experience from my internship at Encryptix, I work on machine learning projects involving data analysis and predictive modeling to develop data-driven solutions.</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-hands-helping"></i>
+                    <h2>Community Service</h2>
+                    <p>As a volunteer in the National Service Scheme (NSS), I actively contribute to community service and development projects, helping to make a positive impact in society.</p>
+                    <a href="#">Learn more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ---------------portfolio-------------- -->
+
+
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="work-1.png">
+                    <div class="layer">
+                        <h3>Web Development Projects</h3>
+                        <p>I have worked on various web development projects, building responsive and user-friendly websites using HTML, CSS, and JavaScript. These projects showcase my ability to create dynamic and interactive web applications.</p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="work-2.png">
+                    <div class="layer">
+                        <h3>Machine Learning Projects</h3>
+                        <p>During my internship at Encryptix, I worked on machine learning projects involving data analysis and predictive modeling. These projects highlight my skills in implementing machine learning algorithms and models.</p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="work-3.png">
+                    <div class="layer">
+                        <h3>DIY Course Projects</h3>
+                        <p>As part of a comprehensive DIY course, I completed several hands-on projects that enhanced my practical skills and problem-solving abilities. These projects demonstrate my ability to apply theoretical knowledge to real-world problems.</p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="nss.png">
+                    <div class="layer">
+                        <h3>Volunteering in NSS</h3>
+                        <p>Through my active participation in the National Service Scheme (NSS), I have contributed to various community service and development projects. This experience has helped me develop a sense of social responsibility and teamwork.</p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="btn">See more</a>
+        </div>
+    </div>
+
+
+    <!-- -------------contact------------------ -->
+
+
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-solid fa-paper-plane"></i>vagrahari231@gmail.com</p>
+                    <p><i class="fa-solid fa-square-phone"></i>8787052247</p>
+                    <div class="social-icon">
+                        <a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/vinay_agrahari_03/?hl=en"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/vinay-agrahari-4572a2289/"><i class="fab fa-linkedin"></i></a>
+
+                    </div>
+                    <a href="CV.pdf" download class="btn btn2">Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <input type="text" name="Phone" placeholder="Phone no." required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button Type="submit" class="btn btn2">Submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2024. All rights reserved. Made with <i class="fa-solid fa-heart"></i> by Vinay.</p>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+
+
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.target.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+
+
+
+
+    </script>
+
+    <script>
+        var sidemenu = document.getElementById("sidemenu");
+
+        function openmenu() {
+            sidemenu.style.right = "0";
+        }
+
+        function closemenu() {
+            sidemenu.style.right = "-200px";
+        }
+    </script>
+
+
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbz8LRjbqjjjtCoaq8fB6OoPntf1eFQjCM-rf_logjWhRs91T0kVY3eOeEIWkE_T-1vW/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById("msg")
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => {
+                    msg.innerHTML = "Message sent successfully"
+                    setTimeout(function () {
+                        msg.innerHTML = ""
+                    }, 5000)
+                    form.reset()
+                })
+                .catch(error => console.error('Error!', error.message))
+        })
+    </script>
+
+
+
+</body>
+
+</html>
